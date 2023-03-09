@@ -40,7 +40,7 @@ class BaseModel:
             self.updated_at = datetime.utcnow()
             models.storage.new(self)
         else:
-            for key, value in kwargs.items()
+            for key, value in kwargs.items():
                 if key in ("updated_at", "created_at"):
                     self.__dict__[key] = datetime.strptime(
                             value, DATE_TIME_FORMAT)
